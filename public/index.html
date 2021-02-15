@@ -1,0 +1,49 @@
+<html>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-performance.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCaDyjIzfgJki5lodAVb1q6mfXclZBmE8E",
+    authDomain: "fir-camp-5ee20.firebaseapp.com",
+    projectId: "fir-camp-5ee20",
+    storageBucket: "fir-camp-5ee20.appspot.com",
+    messagingSenderId: "30205203383",
+    appId: "1:30205203383:web:146a58e232afcf5a840e32",
+    measurementId: "G-F5T2C0MLY4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  // Initialize Performance Monitoring and get a reference to the service
+  var perf = firebase.performance();
+</script>
+
+<script src="./app.js" defer></script>
+</head>
+<body>
+<h1>My firebase app</h1>
+<section id="noUser">
+  <button id=login>Login</button>
+</section>
+<section id="signedUser" hidden=true>
+  <div id="userDetails"></div>
+  <button id=logout>Logout</button>
+  <hr/>
+  <h2>Todo List</h2>
+  <div id="todoList"></div>
+  <input type="text" id="text" placeholder="Todo"/>
+  <button id=todo>Add Todo</button>
+</section>
+</body>
+</html>
